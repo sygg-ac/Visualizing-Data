@@ -174,10 +174,10 @@ def update_output_container(selected_statistics, input_year):
          # Hint:Use the columns Vehicle_Type and Advertising_Expenditure
         exp_data=yearly_data.groupby('Vehicle_Type')['Advertising_Expenditure'].sum().reset_index()
         Y_chart4 = dcc.Graph(
-            figure=px.pie,
+            figure=px.pie(exp_data,
             names='Vehicle_Type',
             values='Advertising_Expenditure',
-            title='Total Ad Expenditure for each Vehicle')
+            title='Total Ad Expenditure for each Vehicle'))
 
 #TASK 2.6: Returning the graphs for displaying Yearly data
         return [
