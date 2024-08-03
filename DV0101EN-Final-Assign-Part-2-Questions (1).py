@@ -113,7 +113,7 @@ def update_output_container(selected_statistics, input_year):
             figure=px.pie(exp_rec,
             values='Advertising_Expenditure',
             names='Vehicle_Type',
-            title="Total expenditure share by Vehicle type during Recessions")
+            title="Total expenditure share by Vehicle type during Recessions"))
 
 # Plot 4 bar chart for the effect of unemployment rate on vehicle type and sales
         #grouping data for plotting
@@ -184,10 +184,9 @@ def update_output_container(selected_statistics, input_year):
                 html.Div(className='chart-item', children=[html.Div(children=Y_chart1),html.Div(children=Y_chart2)],style={'display':'flex'}),
                 html.Div(className='chart-item', children=[html.Div(children=Y_chart3),html.Div(children=Y_chart4)],style={'display': 'flex'})
         
-    else:
-        return None
+        else:
+            return None
 
 # Run the Dash app
 if __name__ == '__main__':
     app.run_server(debug=True)
-
