@@ -34,7 +34,7 @@ year_list = [i for i in range(1980, 2024, 1)]
 # Create the layout of the app
 app.layout = html.Div([
     #TASK 2.1 Add title to the dashboard
-    html.H1('Automobile Sales Statistics Dashboard'),#Include style for title
+    html.H1('Automobile Sales Statistics Dashboard', style={'textAlign':'center', 'color':'#503D36', 'font-size':24}),#Include style for title
     #TASK 2.2: Add two dropdown menus
     html.Div([
         html.Label("Select Statistics:"),
